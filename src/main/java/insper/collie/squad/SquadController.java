@@ -22,7 +22,7 @@ public interface SquadController {
 
     
     @GetMapping("/squad/{id}")
-    public ResponseEntity<SquadInfo> getSquad(
+    public ResponseEntity<SquadAllInfo> getSquad(
         @PathVariable(required = true) String id
     );
 
