@@ -1,1 +1,6 @@
 
+springdoc:
+  swagger-ui:
+    path: /squad-swagger-ui.html 
+  api-docs:
+    path: /squad-api-docs 
