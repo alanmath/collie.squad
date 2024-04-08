@@ -13,6 +13,9 @@ public interface SquadController {
     @GetMapping("/squad/{id}")
     ResponseEntity<SquadAllInfo> getSquad(@PathVariable String id);
 
+    @GetMapping("/squad/exists/{id}")
+    ResponseEntity<Boolean> isSquad(@PathVariable String id);
+
     @GetMapping("/squad")
     ResponseEntity<List<SquadInfo>> getAllSquads();
 
