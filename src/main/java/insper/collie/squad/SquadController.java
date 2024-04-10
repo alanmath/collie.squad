@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 @FeignClient(name = "collie-squad")
 public interface SquadController {
 
@@ -24,4 +25,7 @@ public interface SquadController {
 
     @DeleteMapping("/squad/{id}")
     ResponseEntity<SquadInfo> deleteSquad(@PathVariable String id);
+
+    @PostMapping("/squad/csv")
+    ResponseEntity<List<SquadInfo>> registerSquadsFromCSV(@RequestParam("file") MultipartFile file);
 }
