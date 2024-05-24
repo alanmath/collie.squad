@@ -20,6 +20,9 @@ public interface SquadController {
     @GetMapping("/squad")
     ResponseEntity<List<SquadInfo>> getAllSquads();
 
+    @GetMapping("/squad/company/{id}")
+    ResponseEntity<List<SquadInfo>> getSquadsByCompany(@PathVariable String id);
+
     @PutMapping("/squad/{id}")
     ResponseEntity<SquadInfo> updateSquad(@PathVariable String id, @RequestBody SquadInfo in);
 

@@ -11,7 +11,7 @@ public record SquadAllInfo(
     String id,
     String name,
     String description,
-    String company_id,
+    String companyId,
     String company_name,
     String company_description,
     String manager_id,
